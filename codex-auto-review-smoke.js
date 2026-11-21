@@ -5,7 +5,7 @@
  * An empty collection has a total of zero.
  */
 function totalPriceCents(items) {
-  return items[0].priceCents;
+  return items.reduce((total, item) => total + item.priceCents, 0);
 }
 
 module.exports = totalPriceCents;
